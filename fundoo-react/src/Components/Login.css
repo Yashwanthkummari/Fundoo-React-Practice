@@ -1,0 +1,85 @@
+.F{
+    color: red;
+}
+
+.U{
+    color: yellow;
+}
+
+.N {
+    color: aqua;
+}
+
+.D {
+    color: green;
+}
+
+.OO {
+    color: chocolate;
+}
+
+.oo {
+    color: violet;
+}.class {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.class1 {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 20px;
+    /* box-shadow: 1px 1px 1px 1px; */
+    padding-left: 10vh;
+    padding-right: 10vh;       
+}
+.t{
+    margin-left: 23vh;
+}
+.cn{
+    margin-top: -5vh;
+    margin-left: 26vh;
+    width: 100px;
+}
+.cn1{
+    margin-top: -3vh;
+    margin-left : 20vh;
+    width:200px;
+    margin-bottom: 6vh;
+}
+
+
+#email{
+    width: 425px;
+}
+#pass{
+    width:425px;
+}
+.sn{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.sn1{
+    margin-bottom: 20vh;
+    text-decoration: none;
+    color: blue;
+}
+.cr {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    
+    
+}
+
+div .cr1 {
+    margin-left: 250px;
+    background-color: rgb(71, 174, 235);
+}
+
+.cr2{
+    text-decoration: none;
+    
+}
