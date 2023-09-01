@@ -1,0 +1,120 @@
+.f {
+    color: red;
+}
+
+.u {
+    color: yellow;
+}
+
+.n {
+    color: aqua;
+    
+}
+
+.d {
+    color: green;
+}
+
+.O {
+    color: chocolate;
+}
+
+.o {
+    color: violet;
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    padding-left: 2vh;
+    padding-right: 2vh; 
+    margin-left: 45vh;
+    margin-right: 30vh;
+}
+.cs2{
+    margin-left: -50px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+  
+}
+.cs{
+    margin-left: -50px;
+    margin-top: 5px;
+}
+.cs1{
+    margin-left:-50px ;
+    margin-bottom: 40px;
+}
+.es{
+    margin-left:-50px;
+    margin-right:10px;
+}
+.T {
+    margin-right:30px;
+    text-align: left;
+}
+
+.us {
+    
+    margin-top: 2vh;
+    margin-left: -50px;
+
+}
+#username{
+    width: 430px;
+}
+
+.H {
+    margin-left: -8vh;
+}
+
+.I{
+    margin-top: 160px;
+    padding-left: 90px;
+}
+
+
+.cn {
+    margin-left: 22vh;
+}
+
+.signin {
+    display: flex;
+    margin-left: -50px;
+}
+
+.cname {
+    display: flex;
+    margin-left: -50px;
+}
+
+div.ln {
+    margin-left: 2vh;
+}
+
+div.sm {
+    margin-left: 2vh;
+}
+
+.center {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    margin-left: -50px;
+    
+}
+.cb{
+    margin-left: -55px;
+}
+
+div .center1 {
+    margin-left: 250px;
+    background-color: rgb(71, 174, 235);
+}
+
+.center2{
+    text-decoration: none;
+}
+
+
