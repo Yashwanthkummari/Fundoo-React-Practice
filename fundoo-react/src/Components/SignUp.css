@@ -28,27 +28,42 @@
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 10px;
-    padding-left: 2vh;
+    height: 100vh;
+    width: 100vw;
+    /* padding-left: 2vh;
     padding-right: 2vh; 
     margin-left: 45vh;
-    margin-right: 30vh;
+    margin-right: 30vh; */
+}
+.name1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+Image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
 }
 .cs2{
-    margin-left: -50px;
+    /* margin-left: -50px;
     margin-top: -20px;
     margin-bottom: 40px;
-  
+   */
 }
 .cs{
-    margin-left: -50px;
+    
     margin-top: 5px;
 }
 .cs1{
-    margin-left:-50px ;
+   
     margin-bottom: 40px;
 }
 .es{
-    margin-left:-50px;
+   
     margin-right:10px;
 }
 .T {
@@ -59,20 +74,24 @@
 .us {
     
     margin-top: 2vh;
-    margin-left: -50px;
+  
 
 }
 #username{
     width: 430px;
 }
 
-.H {
+/* .H {
     margin-left: -8vh;
-}
+} */
 
 .I{
-    margin-top: 160px;
-    padding-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 160px;
+    padding-left: 90px; */
 }
 
 
@@ -82,12 +101,12 @@
 
 .signin {
     display: flex;
-    margin-left: -50px;
+    
 }
 
 .cname {
     display: flex;
-    margin-left: -50px;
+   
 }
 
 div.ln {
@@ -101,12 +120,12 @@ div.sm {
 .center {
     color: whitesmoke;
     margin-bottom: 20px;
-    margin-left: -50px;
+   
     
 }
-.cb{
+/* .cb{
     margin-left: -55px;
-}
+} */
 
 div .center1 {
     margin-left: 250px;

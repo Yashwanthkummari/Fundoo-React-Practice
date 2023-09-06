@@ -1,9 +1,25 @@
-import React from "react";
+import React,{useState} from "react";
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 import './Login.css';
 
 const Login = () => {
+    const [userLogin, setuserLogin] = useState({
+
+        email: "",
+        password: ""
+    });
+    let name, value;
+
+    const handleInput = (y) => {
+        name = y.target.name
+        value = y.target.value
+        setuserLogin({ ...userLogin, [name]: value })
+    }
+    const handleClick = () => {
+        console.log(userLogin);
+    }
+
     return (
         <div className="class">
 
@@ -16,18 +32,18 @@ const Login = () => {
                 </div>
 
                 <div className="E">
-                    <TextField id="email" label="Email" variant="outlined" />
+                    <TextField id="email" label="Email" variant="outlined" name="email" value={userLogin.email} onChange={handleInput} />
                 </div>
             
                 <div className="sn">
-                    <TextField id="pass" label="Password" type="password" variant="outlined" />
+                    <TextField id="pass" label="Password" type="password" variant="outlined" name="password" value={userLogin.password} onChange={handleInput} />
         
                 </div>
                 <a href="" className="sn1" > Forget password?</a>
                 
                 <div className="cr">
                   <a href="signup.js" className="cr2">create account</a>
-                    <Button className="cr1" variant="Contained" type="Submit">Login</Button>
+                    <Button className="cr1" variant="Contained" type="Submit"  onClick={handleClick}>Login</Button>
 
                 </div>
                 
