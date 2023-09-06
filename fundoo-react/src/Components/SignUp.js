@@ -7,6 +7,11 @@ import { Checkbox } from "@mui/material";
 
 
 const Register = () => {
+    const firstNameregex = /^[a-zA-Z ]{2,30}$/;
+    const lastNameregex = /^[a-zA-Z ]{2,30}$/;
+    const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
+    const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
+
     const [userInput, setUserInput] = useState({
         firstName: "",
         lastName: "",
@@ -15,6 +20,16 @@ const Register = () => {
         confirmpassword: ""
 
     });
+    const [errorObj, setErrorObj] = useState({
+        firstNameerror: false,
+        firstNamehelper: "",
+        lastNameerror: false,
+        lastNamehelper: "",
+        emailError: false,
+        emailHelper: "",
+        passwordError: false,
+        passwordHelper: ""
+    })
     let name, value;
 
     const handleInput = (y) => {
@@ -23,6 +38,65 @@ const Register = () => {
         setUserInput({ ...userInput, [name]: value });
     }
     const handleClick =  async () => {
+        let firstNametest = firstNameregex.test(userInput.firstName)
+       let lastNametest = lastNameregex.test(userInput.lastName)
+        let emailTest = emailRegex.test(userInput.email);
+        let passwordTest = passwordRegex.test(userInput.password);
+
+        if (firstNametest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                firstNameerrorrror: true,
+                firstNamehelper: "enter correct Name"
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                firstNameerror: false,
+                firstNamehelper: ""
+            }));
+        }
+        if (lastNametest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                lastNameerror: true,
+                lastNamehelper: "enter correct Name"
+
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                lastNameerror: false,
+                lastNamehelper: ""
+            }));
+        }
+        if (emailTest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                emailError: true,
+                emailHelper: "enter correct email"
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                emailError: false,
+                emailHelper: ""
+            }));
+        }
+        if (passwordTest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                passwordError: true,
+                passwordHelper: "enter correct password"
+
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                passwordError: false,
+                passwordHelper: ""
+            }));
+        }
         console.log(userInput);
     }
     return (
@@ -36,20 +110,20 @@ const Register = () => {
                     <h2 className="cs2">create your FundooNotes App Account</h2>
                 </div>
                 <div className="cname">
-                    <TextField id="firstName" label="FirstName" variant="outlined" required  name="firstName" value={userInput.firstName} onChange={handleInput}/>
+                    <TextField id="firstName" label="FirstName" variant="outlined" required  name="firstName" value={userInput.firstName} onChange={handleInput}  error={errorObj.firstNameerror} helperText={errorObj.firstNamehelper}/>
 
-                    <TextField id="lastname" className="ln" label="LastName" variant="outlined" required name="lastName" value={userInput.lastName} onChange={handleInput} />
+                    <TextField id="lastname" className="ln" label="LastName" variant="outlined" required name="lastName" value={userInput.lastName} onChange={handleInput} error={errorObj.lastNamehelper} helperText={errorObj.lastNamehelper} />
                 </div>
 
 
                 <div className="us">
-                    <TextField id="username" label="Email" variant="outlined" required name="email" value={userInput.email} onChange={handleInput} />
+                    <TextField id="username" label="Email" variant="outlined" required name="email" value={userInput.email} onChange={handleInput} error={errorObj.emailError} helperText={errorObj.emailHelper} />
                 </div >
                 <p className="cs">you can use letters,numbers&periods</p>
                 <p className="cs1">Use your Email Instead</p>
 
                 <div className="signin">
-                    <TextField id="password" label="Password" type="password" variant="outlined" required name="password" value={userInput.password} onChange={handleInput} />
+                    <TextField id="password" label="Password" type="password" variant="outlined" required name="password" value={userInput.password} onChange={handleInput} error={errorObj.passwordError} helperText={errorObj.passwordHelper} />
 
                     <TextField id="confirm Password" className="sm" label="Confirm Password" type="password" name="confirmpassword" variant="outlined" required value={userInput.confirmpassword} onChange={handleInput}  />
                 </div>

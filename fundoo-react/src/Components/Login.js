@@ -4,11 +4,19 @@ import Button from "@mui/material/Button";
 import './Login.css';
 
 const Login = () => {
-    const [userLogin, setuserLogin] = useState({
+    const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
+    const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
 
+    const [userLogin, setuserLogin] = useState({
         email: "",
         password: ""
     });
+    const [errorObj, setErrorObj] = useState({
+        emailError: false,
+        emailHelper: "",
+        passwordError: false,
+        passwordHelper: ""
+    })
     let name, value;
 
     const handleInput = (y) => {
@@ -17,6 +25,35 @@ const Login = () => {
         setuserLogin({ ...userLogin, [name]: value })
     }
     const handleClick = () => {
+        let emailTest = emailRegex.test(userLogin.email);
+        let passwordTest = passwordRegex.test(userLogin.password);
+        if (emailTest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                emailError: true,
+                emailHelper: "enter correct email"
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                emailError: false,
+                emailHelper: ""
+            }));
+        }
+        if (passwordTest == false) {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                passwordError: true,
+                passwordHelper: "enter correct password"
+
+            }));
+        } else {
+            setErrorObj((prevState) => ({
+                ...prevState,
+                passwordError: false,
+                passwordHelper: ""
+            }));
+        }
         console.log(userLogin);
     }
 
@@ -32,11 +69,11 @@ const Login = () => {
                 </div>
 
                 <div className="E">
-                    <TextField id="email" label="Email" variant="outlined" name="email" value={userLogin.email} onChange={handleInput} />
+                    <TextField id="email" label="Email" variant="outlined" name="email" value={userLogin.email} onChange={handleInput}  error={errorObj.emailError} helperText={errorObj.emailHelper}  />
                 </div>
             
                 <div className="sn">
-                    <TextField id="pass" label="Password" type="password" variant="outlined" name="password" value={userLogin.password} onChange={handleInput} />
+                    <TextField id="pass" label="Password" type="password" variant="outlined" name="password" value={userLogin.password} onChange={handleInput} error={errorObj.passwordError} helperText={errorObj.passwordHelper}/>
         
                 </div>
                 <a href="" className="sn1" > Forget password?</a>
