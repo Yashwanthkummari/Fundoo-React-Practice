@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
-// import Register from './Components/SignUp.js';
-import Login from './Components/Login'; 
+import Register from './Components/SignUp.js';
+// import Login from './Components/Login'; 
 
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
     //   </header>
     // </div>
     <div>
-      {/* <Register/> */}
-      <Login/>
+      <Register/>
+      {/* <Login/> */}
       </div>
     
   );

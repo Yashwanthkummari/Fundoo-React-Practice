@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import './SignUp.css';
 import gmailImage from './Images/Gmail.jpg';
 import { Checkbox } from "@mui/material";
+import { signup } from "../Sevices/Userservices";
 
 
 const Register = () => {
@@ -98,6 +99,12 @@ const Register = () => {
             }));
         }
         console.log(userInput);
+        if(firstNametest === true && lastNametest === true && emailTest === true && passwordTest === true)
+        {
+           let response  = await  signup(userInput);
+           console.log(response);
+           localStorage.setItem("token", response.data.data.userId);
+        }
     }
     return (
         <div className="name">

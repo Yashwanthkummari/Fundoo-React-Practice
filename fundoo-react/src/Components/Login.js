@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 import './Login.css';
+import { signin } from "../Sevices/Userservices";
+
 
 const Login = () => {
     const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
@@ -19,12 +21,12 @@ const Login = () => {
     })
     let name, value;
 
-    const handleInput = (y) => {
+    const handleInput =  (y) => {
         name = y.target.name
         value = y.target.value
         setuserLogin({ ...userLogin, [name]: value })
     }
-    const handleClick = () => {
+    const handleClick = async () => {
         let emailTest = emailRegex.test(userLogin.email);
         let passwordTest = passwordRegex.test(userLogin.password);
         if (emailTest == false) {
@@ -55,6 +57,12 @@ const Login = () => {
             }));
         }
         console.log(userLogin);
+        if(emailTest === true && passwordTest === true)
+        {
+           let response  = await  signin(userLogin);
+           console.log(response);
+           localStorage.setItem("token", response.data.data);
+        }
     }
 
     return (
