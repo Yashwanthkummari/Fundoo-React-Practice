@@ -1,7 +1,9 @@
-//import logo from './logo.svg';
-import './App.css';
-import Register from './Components/SignUp.js';
+// import logo from './logo.svg';
+// import './App.css';
+// import Register from './Components/SignUp.js';
 // import Login from './Components/Login'; 
+
+import Router from "./Router/Router";
 
 
 function App() {
@@ -23,8 +25,9 @@ function App() {
     //   </header>
     // </div>
     <div>
-      <Register/>
-      {/* <Login/> */}
+      {/* <Register/>
+      <Login/> */}
+       <Router/>
       </div>
     
   );

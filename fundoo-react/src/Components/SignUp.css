@@ -30,29 +30,48 @@
     border-radius: 10px;
     height: 100vh;
     width: 100vw;
+    align-items:  center;
+    border: 1px solid saddlebrown;
+    /* background-color: green; */
     /* padding-left: 2vh;
     padding-right: 2vh; 
     margin-left: 45vh;
     margin-right: 30vh; */
 }
+.name2{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 60%;
+    border: 1px solid green;
+    /* background-color: yellow; */
+}
+
 .name1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 80%;
+    width: 60%;
+    border: 1px solid blueviolet;
+    /* background-color: red; */
     /* align-items: center; */
 }
-Image{
+.Image{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 40%;
+    border: 1px solid red;
+    /* background-color: orange; */
    
 }
-.cs2{
-    /* margin-left: -50px;
-    margin-top: -20px;
-    margin-bottom: 40px;
-   */
+.H{
+   
+   border: 1px solid black;
+
 }
 .cs{
     
@@ -66,10 +85,7 @@ Image{
    
     margin-right:10px;
 }
-.T {
-    margin-right:30px;
-    text-align: left;
-}
+
 
 .us {
     
@@ -77,12 +93,8 @@ Image{
   
 
 }
-#username{
+/* #username{
     width: 430px;
-}
-
-/* .H {
-    margin-left: -8vh;
 } */
 
 .I{

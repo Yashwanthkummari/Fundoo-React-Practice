@@ -3,6 +3,8 @@ import TextField from '@mui/material/TextField';
 import Button from "@mui/material/Button";
 import './Login.css';
 import { signin } from "../Sevices/Userservices";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Login = () => {
@@ -13,6 +15,9 @@ const Login = () => {
         email: "",
         password: ""
     });
+
+    const navigate = useNavigate()
+
     const [errorObj, setErrorObj] = useState({
         emailError: false,
         emailHelper: "",
@@ -62,6 +67,8 @@ const Login = () => {
            let response  = await  signin(userLogin);
            console.log(response);
            localStorage.setItem("token", response.data.data);
+           navigate("/dashboard")
+
         }
     }
 
@@ -87,7 +94,7 @@ const Login = () => {
                 <a href="" className="sn1" > Forget password?</a>
                 
                 <div className="cr">
-                  <a href="signup.js" className="cr2">create account</a>
+                  <a href="/signup" className="cr2">create account</a>
                     <Button className="cr1" variant="Contained" type="Submit"  onClick={handleClick}>Login</Button>
 
                 </div>
