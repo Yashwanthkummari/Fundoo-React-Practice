@@ -1,0 +1,15 @@
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.Icons{
+    display: flex;
+    justify-content: space-between;
+}
+.Icon{
+    color: gray;
+}
+.next{
+    display: flex;
+    flex-direction: column;
+}

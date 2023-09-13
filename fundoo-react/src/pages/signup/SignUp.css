@@ -1,0 +1,267 @@
+/* header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.Container1{
+    display: flex;
+    flex-direction: row;
+    width:80% ;
+    height: 80%;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+
+.Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Container2{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+.Container3{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.image {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Image{
+    display: flex;
+}
+.names,.passwords {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.FirstName,.password {
+    display: flex;
+    flex-direction: row;
+    width: 45%;   
+}
+.LastName,.confirmpassword {
+    display: flex;
+    flex-direction: row;
+    width: 45%;  
+}
+.email {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.signin {
+    text-decoration: none;
+}
+div .button {
+    background-color: rgb(71, 174, 235);
+} 
+.f {
+    color: red;
+}
+.u {
+    color: yellow;
+}
+.n {
+    color: aqua;
+}
+.d {
+    color: green;
+}
+.O {
+    color: chocolate;
+}
+.o {
+    color: violet;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .f {
+    color: red;
+}
+
+.u {
+    color: yellow;
+}
+
+.n {
+    color: aqua;
+    
+}
+
+.d {
+    color: green;
+}
+
+.O {
+    color: chocolate;
+}
+
+.o {
+    color: violet;
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    height: 100vh;
+    width: 100vw;
+    align-items:  center;
+    border: 1px solid saddlebrown; */
+    /* background-color: green; */
+    /* padding-left: 2vh;
+    padding-right: 2vh; 
+    margin-left: 45vh;
+    margin-right: 30vh; */
+/* }
+.name2{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 60%;
+    border: 1px solid green; */
+    /* background-color: yellow; */
+/* }
+
+.name1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 60%;
+    border: 1px solid blueviolet; */
+    /* background-color: red; */
+    /* align-items: center; */
+/* }
+.Image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    border: 1px solid red; */
+    /* background-color: orange; */
+   
+/* }
+.H{
+   
+   border: 1px solid black;
+
+}
+.cs{
+    
+    margin-top: 5px;
+}
+.cs1{
+   
+    margin-bottom: 40px;
+}
+.es{
+   
+    margin-right:10px;
+}
+
+
+.us {
+    
+    margin-top: 2vh; */
+  
+
+/* } */
+/* #username{
+    width: 430px;
+} */
+
+/* .I{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* margin-top: 160px;
+    padding-left: 90px; */
+/* } */
+
+
+/* .cn {
+    margin-left: 22vh;
+}
+
+.signin {
+    display: flex;
+    
+}
+
+.cname {
+    display: flex;
+   
+}
+
+div.ln {
+    margin-left: 2vh;
+}
+
+div.sm {
+    margin-left: 2vh;
+}
+
+.center {
+    color: whitesmoke;
+    margin-bottom: 20px;
+   
+    
+} */
+/* .cb{
+    margin-left: -55px;
+} */
+
+/* div .center1 {
+    margin-left: 250px;
+    background-color: rgb(71, 174, 235);
+}
+
+.center2{
+    text-decoration: none;
+} */
+
+

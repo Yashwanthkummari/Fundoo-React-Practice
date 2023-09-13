@@ -108,7 +108,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 
-export default function MiniDrawer() {
+export default function MiniDrawer({setdtaNotes}) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -276,7 +276,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Notes', 'Remainders', 'Edit', 'Label', 'Trash'].map((text, index) => (
+          {['Notes', 'Remainders', 'Edit', 'Archive', 'Trash'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -293,11 +293,11 @@ export default function MiniDrawer() {
                   }}
                 >
                   {/* {index % 2 === 0 ? <LightbulbOutlinedIcon/>:<ArchiveIcon/> } */}
-                  {index === 0 ? <LightbulbOutlinedIcon /> : ""}
-                  {index === 1 ? <NotificationsOutlinedIcon /> : ""}
+                  {index === 0 ? <LightbulbOutlinedIcon onClick={()=> setdtaNotes('Notes')} /> : ""}
+                  {index === 1 ? <NotificationsOutlinedIcon  /> : ""}
                   {index === 2 ? <EditIcon /> : ""}
-                  {index === 3 ? <ArchiveIcon /> : ""}
-                  {index === 4 ? <DeleteIcon /> : ""}
+                  {index === 3 ? <ArchiveIcon onClick={()=> setdtaNotes('Archive')} /> : ""}
+                  {index === 4 ? <DeleteIcon onClick={()=> setdtaNotes('Trash')} /> : ""}
 
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
